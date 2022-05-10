@@ -4,7 +4,7 @@
   --primary: hsl(257, 40%, 49%);
   --secondary: hsl(300, 69%, 71%);
 
-  --text-color: #fff2ff;
+  --text-color: #ebdbfa;
 
   --font-1: "Open Sans", system-ui;
   --font-1: "Poppins", system-ui;
@@ -28,7 +28,7 @@ body {
 
 /* Text Appearance */
 h1 {
-  color: --var(--white);
+  color: var(--white);
   font-size: 37px;
   line-height: 1.5;
   font-weight: 600;
@@ -42,8 +42,6 @@ p {
 /* Components */
 
 main {
-  padding: 50px;
-  padding-right: 150px;
   padding-bottom: 0;
 }
 button {
@@ -66,16 +64,25 @@ button:hover {
 /* Classes */
 
 /* Logo */
+.logo,
+.main-content {
+  padding: 50px 150px 70px 80px;
+}
+
 .logo > img {
   width: 180px;
   height: auto;
-  margin-bottom: 60px;
 }
 
 /* Main Content */
+.main-content {
+  padding-top: 0;
+  padding-bottom: 0;
+}
 .main-content > div {
   align-items: flex-start;
   margin-left: 50px;
+  width: 40%;
 }
 .main-content > img {
   height: 50%;
@@ -83,6 +90,9 @@ button:hover {
 }
 
 /* Section 3 */
+.footer {
+  padding-right: 50px;
+}
 .footer > i {
   font-size: 18px;
   border: 1px solid var(--white);
@@ -170,9 +180,12 @@ button:hover {
   button {
     padding: 10px 70px;
   }
-  main {
+  main,
+  .logo,
+  .main-content {
     padding: 0;
   }
+
   .logo > img {
     margin-top: 30px;
     width: 130px;
